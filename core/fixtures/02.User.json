@@ -1,6 +1,6 @@
 [
   {
-    "model": "users.user",
+    "model": "core.user",
     "pk": 1,
     "fields": {
       "username": "admin",

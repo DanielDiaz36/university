@@ -37,6 +37,6 @@ class User(AbstractUser):
         return "{} {}".format(self.first_name, self.last_name)
 
     class Meta:
-        app_label = 'users'
+        app_label = 'core'
         db_table = 'auth_user'
         ordering = ['username']

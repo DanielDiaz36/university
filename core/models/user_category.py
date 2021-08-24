@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class UserCategory(models.Model):
 
-    category = models.CharField(verbose_name=_('name'), max_length=255)
+    category = models.CharField(verbose_name=_('category'), max_length=255)
 
     description = models.CharField(verbose_name=_('description'), max_length=255, null=True, blank=True)
 
@@ -19,7 +19,6 @@ class UserCategory(models.Model):
         return self.category
 
     class Meta:
-        app_label = 'core'
         db_table = 'core_user_category'
         verbose_name = _('User category')
         verbose_name_plural = _('User categories')

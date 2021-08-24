@@ -49,8 +49,6 @@ INSTALLED_APPS = [
     # Custom apps
     'website',
     'core',
-    'users',
-    'university',
 ]
 
 MIDDLEWARE = [
@@ -161,7 +159,7 @@ LOGOUT_REDIRECT_URL = reverse_lazy('login')
 APPEND_SLASH = True
 
 # User Model:
-AUTH_USER_MODEL = "users.User"
+AUTH_USER_MODEL = "core.User"
 
 # Captcha config:
 CAPTCHA_IMAGE_SIZE = (100, 40)
