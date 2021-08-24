@@ -1,4 +1,5 @@
 *.cpython-39.pyc
 .env
 .idea/
+staticfiles/
 db.sqlite3
