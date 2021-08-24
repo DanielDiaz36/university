@@ -127,7 +127,7 @@ msgstr "género"
 #: .\core\models\student.py:20
 #: .\core\templates\student\extras\modal_details.html:22
 msgid "email"
-msgstr "género"
+msgstr "correo electrónico"
 
 #: .\core\models\student.py:22
 msgid "date of birthday"

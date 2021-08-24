@@ -33,12 +33,12 @@ class StudentForm(forms.ModelForm):
 
     date_birthday = forms.DateTimeField(
         widget=forms.TextInput(attrs={'class': 'form-control datetime', 'readonly': True, 'required': True}),
-        label=_('date birthday')
+        label=_('date birthday').capitalize()
     )
 
     city_birthday = forms.DateTimeField(
         widget=forms.TextInput(attrs={'class': 'form-control datetime', 'readonly': True, 'required': True}),
-        label=_('city birth')
+        label=_('city birth').capitalize()
     )
 
     def clean_age(self):
