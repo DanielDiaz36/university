@@ -9,7 +9,7 @@ class GenderEnum(Enum):
     MALE = 'male'
 
     CHOICES = (
-        ('female', _('female')),
+        ('female', _('female').capitalize()),
 
-        ('male', _('male')),
+        ('male', _('male').capitalize()),
     )

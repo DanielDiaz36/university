@@ -23,7 +23,7 @@
 
         {% if request.user.user_category.category|validate_perm:"delete-group" and not obj.is_deleted %}
             <a href="javascript:;" class="dropdown-item"
-                  onclick="confirmation('{% trans 'Are you sure want to delete permanent this group?' %}', '{% url 'delete_group' obj.id %}')">
+                  onclick="confirmation('{% trans 'Are you sure want to delete this group?' %}', '{% url 'delete_group' obj.id %}')">
                  <i class="la la-trash text-red"></i>{% trans 'delete'|capfirst %}
             </a>
         {% endif %}

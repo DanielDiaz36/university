@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-24 01:17-0400\n"
+"POT-Creation-Date: 2021-08-24 06:26-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,41 +18,317 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\app\settings.py:131
+#: .\app\settings.py:129
 msgid "English"
 msgstr "Inglés"
 
-#: .\app\settings.py:132
+#: .\app\settings.py:130
 msgid "Spanish"
 msgstr "Español"
 
-#: .\core\models\user_category.py:8
+#: .\core\forms\student.py:36
+#: .\core\templates\student\extras\modal_details.html:23
+msgid "date birthday"
+msgstr "fecha de nacimiento"
+
+#: .\core\forms\student.py:41
+msgid "city birth"
+msgstr "ciudad de nacimiento"
+
+#: .\core\forms\student.py:47
+msgid "Please enter an age between 15 and 35."
+msgstr "Por favor introduzca una edad entre 15 y 35"
+
+#: .\core\models\group.py:14 .\core\models\professor_guide.py:9
+#: .\core\models\student.py:14
+#: .\core\templates\group\extras\modal_details.html:19
+#: .\core\templates\group\list.html:32
+#: .\core\templates\student\extras\modal_details.html:19
+#: .\core\templates\student\list.html:32
 msgid "name"
 msgstr "nombre"
+
+#: .\core\models\group.py:16
+#: .\core\templates\group\extras\modal_details.html:20
+#: .\core\templates\group\list.html:33
+msgid "professor guide"
+msgstr "profesor guía"
+
+#: .\core\models\group.py:23 .\core\templates\group\list.html:7
+#: .\core\templates\student\extras\modal_details.html:24
+#: .\website\templates\includes\menu.html:17
+msgid "group"
+msgstr "grupo"
+
+#: .\core\models\group.py:24 .\core\templates\group\list.html:21
+msgid "groups"
+msgstr "grupos"
+
+#: .\core\models\meta\created.py:6 .\core\models\user.py:27
+#: .\core\models\user_category.py:14
+#: .\core\templates\group\extras\modal_details.html:23
+#: .\core\templates\group\list.html:34
+#: .\core\templates\student\extras\modal_details.html:27
+#: .\core\templates\student\list.html:35
+msgid "created at"
+msgstr "fecha de registro"
+
+#: .\core\models\meta\created.py:8
+#: .\core\templates\group\extras\modal_details.html:22
+#: .\core\templates\student\extras\modal_details.html:26
+msgid "created by"
+msgstr "creado por"
+
+#: .\core\models\meta\deleted.py:6
+msgid "deleted at"
+msgstr "fecha de eliminación"
+
+#: .\core\models\meta\deleted.py:9
+msgid "deleted by"
+msgstr "eliminado por"
+
+#: .\core\models\meta\deleted.py:17 .\core\models\student.py:41
+msgid "Yes"
+msgstr "Sí"
+
+#: .\core\models\meta\deleted.py:17 .\core\models\student.py:41
+msgid "No"
+msgstr "No"
+
+#: .\core\models\meta\updated.py:6 .\core\models\user.py:29
+#: .\core\models\user_category.py:16
+#: .\core\templates\group\extras\modal_details.html:25
+#: .\core\templates\student\extras\modal_details.html:29
+msgid "updated at"
+msgstr "fecha de actualización"
+
+#: .\core\models\meta\updated.py:8
+#: .\core\templates\group\extras\modal_details.html:24
+#: .\core\templates\student\extras\modal_details.html:28
+msgid "updated by"
+msgstr "actualizado por"
+
+#: .\core\models\professor_guide.py:16 .\core\models\professor_guide.py:17
+msgid "Professor guide"
+msgstr "Profesor guía"
+
+#: .\core\models\student.py:16
+#: .\core\templates\student\extras\modal_details.html:20
+#: .\core\templates\student\list.html:33
+msgid "age"
+msgstr "edad"
+
+#: .\core\models\student.py:18
+#: .\core\templates\student\extras\modal_details.html:21
+#: .\core\templates\student\list.html:34
+msgid "gender"
+msgstr "género"
+
+#: .\core\models\student.py:20
+#: .\core\templates\student\extras\modal_details.html:22
+msgid "email"
+msgstr "género"
+
+#: .\core\models\student.py:22
+msgid "date of birthday"
+msgstr "fecha de nacmiento"
+
+#: .\core\models\student.py:24
+msgid "city of birthday"
+msgstr "ciudad de nacimiento"
+
+#: .\core\models\student.py:28 .\core\models\user_category.py:12
+#: .\core\templates\student\extras\modal_details.html:25
+#: .\core\templates\student\list.html:36
+msgid "is active"
+msgstr "está activo"
+
+#: .\core\models\student.py:35 .\website\templates\includes\menu.html:12
+msgid "student"
+msgstr "estudiante"
+
+#: .\core\models\student.py:36 .\core\templates\student\list.html:7
+#: .\core\templates\student\list.html:21
+msgid "students"
+msgstr "estudiantes"
+
+#: .\core\models\user_category.py:8
+msgid "category"
+msgstr "categoría"
 
 #: .\core\models\user_category.py:10
 msgid "description"
 msgstr "descripción"
 
-#: .\core\models\user_category.py:12
-msgid "is active"
-msgstr "está activo"
-
-#: .\core\models\user_category.py:14 .\users\models\user.py:27
-msgid "created at"
-msgstr "fecha de registro"
-
-#: .\core\models\user_category.py:16 .\users\models\user.py:29
-msgid "updated at"
-msgstr "fecha de actualización"
-
-#: .\core\models\user_category.py:24
+#: .\core\models\user_category.py:23
 msgid "User category"
 msgstr "Categoría de usuario"
 
-#: .\core\models\user_category.py:25
+#: .\core\models\user_category.py:24
 msgid "User categories"
 msgstr "Categorías de usuario"
+
+#: .\core\templates\group\extras\modal_details.html:9
+#: .\core\templates\group\extras\options.html:14
+#: .\core\templates\student\extras\modal_details.html:9
+#: .\core\templates\student\extras\options.html:14
+msgid "details"
+msgstr "detalles"
+
+#: .\core\templates\group\extras\modal_details.html:10
+#: .\core\templates\student\extras\modal_details.html:10
+msgid "Close"
+msgstr "Cerrar"
+
+#: .\core\templates\group\extras\modal_details.html:21
+#: .\core\templates\group\list.html:35
+msgid "is deleted"
+msgstr "está eliminado"
+
+#: .\core\templates\group\extras\options.html:20
+#: .\core\templates\student\extras\options.html:20 .\core\views\group.py:84
+#: .\core\views\student.py:89
+msgid "edit"
+msgstr "editar"
+
+#: .\core\templates\group\extras\options.html:26
+msgid "Are you sure want to delete this group?"
+msgstr "¿Está seguro que desea eliminar este grupo?"
+
+#: .\core\templates\group\extras\options.html:27
+#: .\core\templates\student\extras\options.html:43
+msgid "delete"
+msgstr "eliminar"
+
+#: .\core\templates\group\form.html:4
+msgid "add group"
+msgstr "registrar grupo"
+
+#: .\core\templates\group\form.html:30 .\core\templates\student\form.html:34
+msgid "back"
+msgstr "ir atrás"
+
+#: .\core\templates\group\form.html:32 .\core\templates\student\form.html:36
+msgid "save"
+msgstr "guardar"
+
+#: .\core\templates\group\form.html:50 .\core\templates\student\form.html:59
+msgid "select"
+msgstr "seleccionar"
+
+#: .\core\templates\group\list.html:24 .\core\templates\student\list.html:24
+#: .\core\views\group.py:44 .\core\views\student.py:44
+msgid "add"
+msgstr "registrar"
+
+#: .\core\templates\group\list.html:36 .\core\templates\student\list.html:37
+msgid "options"
+msgstr "opciones"
+
+#: .\core\templates\student\extras\options.html:27
+msgid "Are you sure want to enable this student?"
+msgstr "¿Está seguro que desea habilitar este estudiante?"
+
+#: .\core\templates\student\extras\options.html:28
+msgid "enable"
+msgstr "habilitar"
+
+#: .\core\templates\student\extras\options.html:34
+msgid "Are you sure want to disable this student?"
+msgstr "¿Está seguro que desea deshabilitar este estudiante?"
+
+#: .\core\templates\student\extras\options.html:35
+msgid "disable"
+msgstr "deshabilitar"
+
+#: .\core\templates\student\extras\options.html:42
+msgid "Are you sure want to delete permanent this student?"
+msgstr "¿Está seguro que desea eliminar permanentemente este estudiante?"
+
+#: .\core\templates\student\form.html:8
+msgid "add student"
+msgstr "agregar estudiante"
+
+#: .\core\urls.py:9
+msgid "groups/"
+msgstr "grupos/"
+
+#: .\core\urls.py:11
+msgid "groups/add/"
+msgstr "grupos/registrar/"
+
+#: .\core\urls.py:13
+msgid "groups/edit/<int:pk>/"
+msgstr "grupos/editar/<int:pk>/"
+
+#: .\core\urls.py:15
+msgid "groups/delete/<int:pk>/"
+msgstr "grupos/eliminar/<int:pk>/"
+
+#: .\core\urls.py:17
+msgid "groups/details/"
+msgstr "grupos/detalles/"
+
+#: .\core\urls.py:21
+msgid "students/"
+msgstr "estudiantes/"
+
+#: .\core\urls.py:23
+msgid "students/add/"
+msgstr "estudiantes/registrar/"
+
+#: .\core\urls.py:25
+msgid "students/edit/<int:pk>/"
+msgstr "estudiantes/editar/<int:pk>"
+
+#: .\core\urls.py:27
+msgid "students/delete/<int:pk>/"
+msgstr "estudiantes/eliminar/<int:pk>"
+
+#: .\core\urls.py:29
+msgid "students/enable/<int:pk>/"
+msgstr "estudiantes/habilitar/<int:pk>"
+
+#: .\core\urls.py:31
+msgid "students/disable/<int:pk>/"
+msgstr "estudiantes/deshabilitar/<int:pk>"
+
+#: .\core\urls.py:33
+msgid "students/details/"
+msgstr "estudiantes/detalles/"
+
+#: .\core\utils\enums.py:12
+msgid "female"
+msgstr "femenino"
+
+#: .\core\utils\enums.py:14
+msgid "male"
+msgstr "masculino"
+
+#: .\core\views\group.py:53 .\core\views\student.py:53
+msgid "Successfully registered."
+msgstr "Registrado con éxito"
+
+#: .\core\views\group.py:92 .\core\views\student.py:97
+msgid "Successfully edited."
+msgstr "Modificado con éxito"
+
+#: .\core\views\group.py:103 .\core\views\student.py:108
+msgid "Successfully deleted."
+msgstr "Eliminado con éxito"
+
+#: .\core\views\group.py:105 .\core\views\student.py:110
+#: .\core\views\student.py:124 .\core\views\student.py:138
+msgid "Error."
+msgstr "Error."
+
+#: .\core\views\student.py:122
+msgid "Successfully enabled."
+msgstr "Habilitado con éxito"
+
+#: .\core\views\student.py:136
+msgid "Successfully disabled."
+msgstr "Deshabilitado con éxito"
 
 #: .\website\forms\login.py:16
 msgid "Password"
@@ -73,21 +349,73 @@ msgstr "Esta cuenta está inactiva"
 msgid "home"
 msgstr "inicio"
 
-#: .\website\templates\includes\menu.html:12
-msgid "student"
-msgstr "estudiante"
-
-#: .\website\templates\includes\menu.html:17
-msgid "group"
-msgstr "grupo"
-
+#: .\website\templates\includes\menu.html:32
 #: .\website\templates\includes\navigation\account.html:19
 msgid "logout"
 msgstr "salir"
 
-#: .\website\templates\pages\login.html:42
+#: .\website\templates\includes\paginate.html:5
+#: .\website\templates\includes\paginate.html:6
+msgid "total"
+msgstr "total"
+
+#: .\website\templates\includes\paginate.html:11
+msgid "page"
+msgstr "página"
+
+#: .\website\templates\includes\paginate.html:11
+msgid "of"
+msgstr "de"
+
+#: .\website\templates\includes\paginate.html:17
+#: .\website\templates\includes\paginate.html:24
+msgid "previous page"
+msgstr "página anterior"
+
+#: .\website\templates\includes\paginate.html:20
+#: .\website\templates\includes\paginate.html:27
+msgid "previous"
+msgstr "siguiente"
+
+#: .\website\templates\includes\paginate.html:32
+msgid "current page"
+msgstr "página actual"
+
+#: .\website\templates\includes\paginate.html:37
+#: .\website\templates\includes\paginate.html:44
+msgid "next page"
+msgstr "página siguiente"
+
+#: .\website\templates\includes\paginate.html:40
+#: .\website\templates\includes\paginate.html:47
+msgid "next"
+msgstr "siguiente"
+
+#: .\website\templates\layouts\base-fullscreen.html:9
+#: .\website\templates\layouts\base-fullscreen.html:28
+msgid "university"
+msgstr "universidad"
+
+#: .\website\templates\pages\login.html:4
+#: .\website\templates\pages\login.html:64
+msgid "login"
+msgstr "acceder"
+
+#: .\website\templates\pages\login.html:23
+msgid "username"
+msgstr "nombre de usuario"
+
+#: .\website\templates\pages\login.html:35
+msgid "password"
+msgstr "contraseña"
+
+#: .\website\templates\pages\login.html:44
 msgid "Refresh the captcha"
 msgstr "Actualizar el captcha"
+
+#: .\website\templates\pages\login.html:59
+msgid "remember"
+msgstr "recordar"
 
 #: .\website\urls.py:10
 msgid "login/"

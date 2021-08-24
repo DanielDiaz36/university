@@ -1,0 +1,48 @@
+{% load i18n filters %}
+
+
+<div class="dropdown">
+    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
+       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-ellipsis-v"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+
+        <a class="dropdown-item" href="javascript:;" onclick="create_modal__details_student({{ obj.id }})"
+           data-toggle="modal" data-target="#modal_details_student">
+            <i class="la la-search text-blue"></i>
+            <span>{% trans 'details'|capfirst %}</span>
+        </a>
+
+        {% if request.user.user_category.category|validate_perm:"edit-student" %}
+            <a class="dropdown-item" href="{% url 'edit_student' obj.id %}">
+                <i class="la la-edit text-blue"></i>
+                <span>{% trans 'edit'|capfirst %}</span>
+            </a>
+        {% endif %}
+
+        {% if not obj.is_active %}
+            {% if request.user.user_category.category|validate_perm:"enable-student" %}
+                <a href="javascript:;" class="dropdown-item"
+                      onclick="confirmation('{% trans 'Are you sure want to enable this student?' %}', '{% url 'enable_student' obj.id %}')">
+                     <i class="la la-check text-green"></i>{% trans 'enable'|capfirst %}
+                </a>
+            {% endif %}
+        {% else %}
+            {% if request.user.user_category.category|validate_perm:"disable-student" %}
+                <a href="javascript:;" class="dropdown-item"
+                      onclick="confirmation('{% trans 'Are you sure want to disable this student?' %}', '{% url 'disable_student' obj.id %}')">
+                     <i class="la la-remove text-red"></i>{% trans 'disable'|capfirst %}
+                </a>
+            {% endif %}
+        {% endif %}
+
+        {% if request.user.user_category.category|validate_perm:"delete-student" and not obj.is_deleted %}
+            <a href="javascript:;" class="dropdown-item"
+                  onclick="confirmation('{% trans 'Are you sure want to delete permanent this student?' %}', '{% url 'delete_student' obj.id %}')">
+                 <i class="la la-trash text-red"></i>{% trans 'delete'|capfirst %}
+            </a>
+        {% endif %}
+
+    </div>
+</div>

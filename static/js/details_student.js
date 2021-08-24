@@ -1,4 +1,4 @@
-function create_modal__details_group(group_id) {
+function create_modal__details_student(student_id) {
 
     var loading_div = $('.loading_div'),
         loading_html = '' +
@@ -9,12 +9,17 @@ function create_modal__details_group(group_id) {
 
     $.ajax({
         type: 'get',
-        data: {'group_id': group_id},
-        url: $('.content_details_group').data('url'),
+        data: {'student_id': student_id},
+        url: $('.content_details_student').data('url'),
         success: function (result) {
             $('#name').text(result['name']);
-            $('#professor_guide').text(result['professor_guide']);
-            $('#is_deleted').text(result['is_deleted']);
+            $('#age').text(result['age']);
+            $('#gender').text(result['gender']);
+            $('#email').text(result['email']);
+            $('#date_birthday').text(result['date_birthday']);
+            $('#city_birthday').text(result['city_birthday']);
+            $('#group').text(result['group']);
+            $('#is_active').text(result['is_active']);
             $('#created_by').text(result['created_by']);
             $('#created_at').text(result['created_at']);
             $('#updated_by').text(result['updated_by']);

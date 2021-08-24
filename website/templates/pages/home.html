@@ -1,6 +1,8 @@
 {% extends 'layouts/base.html' %}
+{% load i18n %}
 
-{% block title %} Inicio {% endblock title %}
+
+{% block title %} {% trans 'home'|capfirst %} {% endblock title %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}

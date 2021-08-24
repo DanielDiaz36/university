@@ -1,6 +1,6 @@
 {% load static i18n %}
 
-<div class="modal fade" id="modal_details_group" tabindex="-1" role="dialog" aria-labelledby="modal-default"
+<div class="modal fade" id="modal_details_student" tabindex="-1" role="dialog" aria-labelledby="modal-default"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -14,11 +14,15 @@
 
             <div class="modal-body">
                 <div class="loading_div" data-img_url="{% static 'img/loading.gif' %}"></div>
-                <div class="content_details_group" data-url="{% url 'details_group' %}">
+                <div class="content_details_student" data-url="{% url 'details_student' %}">
                     <ul style="padding-left: 0">
                         <li class="first_item_detail"><b class="item_detail__b">{% trans 'name'|capfirst %}: </b><p class="item_details_p" id="name"></p></li>
-                        <li class="item_detail"><b class="item_detail__b">{% trans 'professor guide'|capfirst %}: </b><p class="item_details_p" id="professor_guide"></p></li>
-                        <li class="item_detail"><b class="item_detail__b">{% trans 'is deleted'|capfirst %}: </b><p class="item_details_p" id="is_deleted"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'age'|capfirst %}: </b><p class="item_details_p" id="age"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'gender'|capfirst %}: </b><p class="item_details_p" id="gender"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'email'|capfirst %}: </b><p class="item_details_p" id="email"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'date birthday'|capfirst %}: </b><p class="item_details_p" id="date_birthday"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'group'|capfirst %}: </b><p class="item_details_p" id="group"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'is active'|capfirst %}: </b><p class="item_details_p" id="is_active"></p></li>
                         <li class="item_detail"><b class="item_detail__b">{% trans 'created by'|capfirst %}: </b><p class="item_details_p" id="created_by"></p></li>
                         <li class="item_detail"><b class="item_detail__b">{% trans 'created at'|capfirst %}: </b><p class="item_details_p" id="created_at"></p></li>
                         <li class="item_detail"><b class="item_detail__b">{% trans 'updated by'|capfirst %}: </b><p class="item_details_p" id="updated_by"></p></li>

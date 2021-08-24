@@ -1,0 +1,69 @@
+{% extends "layouts/base.html" %}
+{% load static i18n %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-datepicker/distribution/css/bootstrap-datepicker.min.css' %}">
+{% endblock %}
+
+{% block title %}{% trans 'add student'|capfirst %}{% endblock %}
+
+{% block content %}
+
+    <div class="header bg-primary pb-8 pt-5 pt-md-6"></div>
+
+    <div class="container-fluid mt--7">
+
+        <div class="row">
+            <div class="col-xl-8 mb-8 mb-xl-0" style="margin: 0 auto">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">{{ title }}:</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" id="add_student" enctype="multipart/form-data">{% csrf_token %}
+
+                            {% include 'student/fields.html' %}
+
+                            <div class="">
+                                <a class="btn btn-outline-secondary" style="float: left"
+                                   href="{% url 'students' %}">
+                                    <span class="fas fa-arrow-left"> </span> {% trans 'back'|capfirst %}
+                                </a>
+                                <button class="btn btn-success" type="submit" style="float: right"> {% trans 'save'|capfirst %}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include "includes/footer.html" %}
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="{% static 'plugins/bootstrap-datepicker/js/bootstrap-datepicker.js' %}"></script>
+
+    {% get_current_language as current_language %}
+    {% if current_language == 'es' %}
+        <script src="{% static 'plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js' %}"></script>
+    {% endif %}
+    <script src="{% static 'js/validators.js' %}"></script>
+    <script>
+        $('select').select2({
+            placeholder: "{% trans 'select'|capfirst %}"
+        });
+        $('input.datetime').datepicker({
+            language: "{{ current_language }}",
+            todayHighlight: true,
+            autoclose: true,
+            todayBtn: true,
+            format: 'yyyy-mm-dd'
+        });
+    </script>
+{% endblock %}

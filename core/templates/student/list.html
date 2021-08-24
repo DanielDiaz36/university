@@ -1,0 +1,76 @@
+{% extends "layouts/base.html" %}
+{% load static filters i18n %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block title %}{% trans 'students'|capfirst %}{% endblock %}
+
+
+{% block content %}
+
+    <div class="header bg-primary pb-8 pt-5 pt-md-6"></div>
+
+    <div class="container-fluid mt--7">
+
+        <!-- Table -->
+        <div class="row">
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header border-0 section_page" style="margin-bottom: 35px;">
+                        <h3 class="section_title">{% trans 'students'|capfirst %}</h3>
+                        {% if request.user.user_category.category|validate_perm:"add-student" %}
+                            <div class="section_option">
+                                <a href="{% url 'add_student' %}" class="btn btn-sm btn-primary">{% trans 'add'|capfirst %}</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col" width="25%">{% trans 'name'|capfirst %}</th>
+                                <th scope="col">{% trans 'age'|capfirst %}</th>
+                                <th scope="col">{% trans 'gender'|capfirst %}</th>
+                                <th scope="col">{% trans 'created at'|capfirst %}</th>
+                                <th scope="col" style="text-align: center;">{% trans 'is active'|capfirst %}?</th>
+                                <th scope="col" style="text-align: center;">{% trans 'options'|capfirst %}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {% for obj in object_list %}
+                                    <tr>
+                                        <td>{{ obj.name }}</td>
+                                        <td>{{ obj.age }}</td>
+                                        <td>{{ obj.gender|capfirst }}</td>
+                                        <td>{{ obj.created_at }}</td>
+                                        <td style="text-align: center;">
+                                            <span class="{{ obj.is_active|is_active_color }}">{{ obj.is_active_ }}</span>
+                                        </td>
+                                        <td class="text-center">
+                                            {% include 'student/extras/options.html' %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {% include 'includes/paginate.html' %}
+
+                </div>
+            </div>
+        </div>
+
+        {% include "includes/footer.html" %}
+
+    </div>
+
+    {% include 'modals/confirmacion.html' %}
+    {% include 'student/extras/modal_details.html' %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{% static 'js/details_student.js' %}"></script>
+{% endblock %}

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from core.models import Created, Updated, Deleted
+from core.models import Created, Updated
 from core.utils.enums import GenderEnum
 from core.models.group import Group
-from django.utils.timezone import now
 from django.utils.translation import gettext_lazy as _
 
 
@@ -22,7 +21,7 @@ class Student(Created, Updated):
 
     date_birthday = models.DateField(verbose_name=_('date of birthday'))
 
-    city_birth = models.DateField(verbose_name=_('city of birthday'))
+    city_birthday = models.DateField(verbose_name=_('city of birthday'))
 
     group = models.ForeignKey(Group, on_delete=models.PROTECT)
 
@@ -38,8 +37,5 @@ class Student(Created, Updated):
         ordering = ('created_at',)
         default_permissions = []
 
-    def delete(self, deleted_by=None, **kwargs):
-        self.is_deleted = True
-        self.deleted_by = deleted_by
-        self.deleted_at = now()
-        self.save()
+    def is_active_(self):
+        return _('Yes') if self.is_active else _('No')

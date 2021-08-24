@@ -12,6 +12,11 @@ def is_delete_color(status):
 
 
 @register.filter
+def is_active_color(status):
+    return 'enable' if status is True else 'disable'
+
+
+@register.filter
 def validate_perm(user_category, perm):
     return perm in PERMS_HTML.get(user_category)
 

@@ -6,7 +6,7 @@ function confirmation(msg_alerta, href) {
         showCancelButton: true,
         showConfirmButton: true,
         allowOutsideClick: false,
-        confirmButtonText: 'Acept',
+        confirmButtonText: 'Accept',
         cancelButtonText: 'Cancel',
         cancelButtonClass: 'btn-secondary'
     }, function () {

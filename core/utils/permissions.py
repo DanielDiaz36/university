@@ -54,6 +54,8 @@ PERMS_HTML = {
         'delete-group',
         'add-student',
         'edit-student',
+        'enable-student',
+        'disable-student',
         'delete-student',
     ]
 }

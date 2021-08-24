@@ -1,0 +1,132 @@
+{% with form.name as field %}
+    <div class="form-group mb-3">
+        <label for="id_{{ field.name }}" style="font-size: 15px"
+               class="label label-default control-label">{{ field.label }}
+            <h1 class="field_required">*</h1>
+        </label>
+        <div class="input-group input-group-alternative">
+            {{ field }}
+        </div>
+        {% if field.errors %}
+            <ul class="errorlist">
+                {% for error in field.errors %}
+                    <li style="color: #ac2925; font-size: 12px">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endwith %}
+
+{% with form.age as field %}
+    <div class="form-group mb-3">
+        <label for="id_{{ field.name }}" style="font-size: 15px"
+               class="label label-default control-label">{{ field.label }}
+            <h1 class="field_required">*</h1>
+        </label>
+        <div class="input-group input-group-alternative">
+            {{ field }}
+        </div>
+        {% if field.errors %}
+            <ul class="errorlist">
+                {% for error in field.errors %}
+                    <li style="color: #ac2925; font-size: 12px">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endwith %}
+
+{% with form.gender as field %}
+    <div class="form-group mb-3">
+        <label for="id_{{ field.name }}" style="font-size: 15px"
+               class="label label-default control-label">{{ field.label }}
+            <h1 class="field_required">*</h1>
+        </label>
+        <div class="input-group input-group-alternative">
+            {{ field }}
+        </div>
+        {% if field.errors %}
+            <ul class="errorlist">
+                {% for error in field.errors %}
+                    <li style="color: #ac2925; font-size: 12px">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endwith %}
+
+{% with form.email as field %}
+    <div class="form-group mb-3">
+        <label for="id_{{ field.name }}" style="font-size: 15px"
+               class="label label-default control-label">{{ field.label }}
+            <h1 class="field_required">*</h1>
+        </label>
+        <div class="input-group input-group-alternative">
+            {{ field }}
+        </div>
+        {% if field.errors %}
+            <ul class="errorlist">
+                {% for error in field.errors %}
+                    <li style="color: #ac2925; font-size: 12px">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endwith %}
+
+{% with form.date_birthday as field %}
+    <div class="form-group mb-3">
+        <label for="id_{{ field.name }}" style="font-size: 15px"
+               class="label label-default control-label">{{ field.label }}
+            <h1 class="field_required">*</h1>
+        </label>
+        <div class="input-group input-group-alternative">
+            {{ field }}
+        </div>
+        {% if field.errors %}
+            <ul class="errorlist">
+                {% for error in field.errors %}
+                    <li style="color: #ac2925; font-size: 12px">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endwith %}
+
+{% with form.city_birthday as field %}
+    <div class="form-group mb-3">
+        <label for="id_{{ field.name }}" style="font-size: 15px"
+               class="label label-default control-label">{{ field.label }}
+            <h1 class="field_required">*</h1>
+        </label>
+        <div class="input-group input-group-alternative">
+            {{ field }}
+        </div>
+        {% if field.errors %}
+            <ul class="errorlist">
+                {% for error in field.errors %}
+                    <li style="color: #ac2925; font-size: 12px">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endwith %}
+
+{% with form.group as field %}
+    <div class="form-group mb-3">
+        <label for="id_{{ field.name }}" style="font-size: 15px"
+               class="label label-default control-label">{{ field.label }}
+            <h1 class="field_required">*</h1>
+        </label>
+        <div class="input-group input-group-alternative">
+            {{ field }}
+        </div>
+        {% if field.errors %}
+            <ul class="errorlist">
+                {% for error in field.errors %}
+                    <li style="color: #ac2925; font-size: 12px">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endwith %}
