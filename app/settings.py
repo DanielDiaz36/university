@@ -69,8 +69,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'university', 'templates'),
             os.path.join(BASE_DIR, 'website', 'templates'),
+            os.path.join(BASE_DIR, 'core', 'templates'),
         ]
         ,
         'APP_DIRS': True,
@@ -120,9 +120,9 @@ TIME_ZONE = 'America/Havana'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
-USE_TZ = True
+USE_TZ = False
 
 # App language
 LANGUAGES = (

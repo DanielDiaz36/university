@@ -7,7 +7,7 @@ from django.utils.timezone import now
 from django.utils.translation import gettext_lazy as _
 
 
-class Student(Created, Updated, Deleted):
+class Student(Created, Updated):
     """
     Model to describe a student
     """
@@ -26,6 +26,8 @@ class Student(Created, Updated, Deleted):
 
     group = models.ForeignKey(Group, on_delete=models.PROTECT)
 
+    is_active = models.BooleanField(default=True, verbose_name=_('is active'))
+
     def __str__(self):
         return self.name
 
@@ -33,7 +35,7 @@ class Student(Created, Updated, Deleted):
         db_table = 'core_student'
         verbose_name = _('student')
         verbose_name_plural = _('students')
-        ordering = ('is_deleted', 'created_at')
+        ordering = ('created_at',)
         default_permissions = []
 
     def delete(self, deleted_by=None, **kwargs):

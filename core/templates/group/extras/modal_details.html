@@ -1,0 +1,36 @@
+{% load static i18n %}
+
+<div class="modal fade" id="modal_details_group" tabindex="-1" role="dialog" aria-labelledby="modal-default"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header section_page_modal">
+                <h3 class="modal-title section_title_modal">{% trans 'details'|capfirst %}</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="{% trans 'Close' %}">
+                    <span aria-hidden="true" style="color: #ffffff">×</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="loading_div" data-img_url="{% static 'img/loading.gif' %}"></div>
+                <div class="content_details_group">
+                    <ul style="padding-left: 0">
+                        <li class="first_item_detail"><b class="item_detail__b">{% trans 'name'|capfirst %}: </b><p class="item_details_p" id="name"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'professor guide'|capfirst %}: </b><p class="item_details_p" id="professor_guide"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'is deleted'|capfirst %}: </b><p class="item_details_p" id="is_deleted"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'created by'|capfirst %}: </b><p class="item_details_p" id="created_by"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'created at'|capfirst %}: </b><p class="item_details_p" id="created_at"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'updated by'|capfirst %}: </b><p class="item_details_p" id="updated_by"></p></li>
+                        <li class="item_detail"><b class="item_detail__b">{% trans 'updated at'|capfirst %}: </b><p class="item_details_p" id="updated_at"></p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Cerrar</button>
+            </div>
+
+        </div>
+    </div>
+</div>

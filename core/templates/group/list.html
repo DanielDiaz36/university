@@ -1,0 +1,74 @@
+{% extends "layouts/base.html" %}
+{% load static filters i18n %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block title %}{% trans 'group'|capfirst %}{% endblock %}
+
+
+{% block content %}
+
+    <div class="header bg-primary pb-8 pt-5 pt-md-6"></div>
+
+    <div class="container-fluid mt--7">
+
+        <!-- Table -->
+        <div class="row">
+            <div class="col">
+                <div class="card shadow">
+                    <div class="card-header border-0 section_page" style="margin-bottom: 35px;">
+                        <h3 class="section_title">{% trans 'groups'|capfirst %}</h3>
+                        {% if request.user.user_category.category|validate_perm:"add-group" %}
+                            <div class="section_option">
+                                <a href="{% url 'add_group' %}" class="btn btn-sm btn-primary">{% trans 'add'|capfirst %}</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">{% trans 'name'|capfirst %}</th>
+                                <th scope="col">{% trans 'professor guide'|capfirst %}</th>
+                                <th scope="col">{% trans 'created at'|capfirst %}</th>
+                                <th scope="col" style="text-align: center;">{% trans 'is deleted'|capfirst %}?</th>
+                                <th scope="col" style="text-align: center;">{% trans 'options'|capfirst %}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {% for obj in object_list %}
+                                    <tr>
+                                        <td>{{ obj.name }}</td>
+                                        <td>{{ obj.professor_guide }}</td>
+                                        <td>{{ obj.created_at }}</td>
+                                        <td style="text-align: center;">
+                                            <span class="{{ obj.is_deleted|is_delete_color }}">{{ obj.is_deleted_ }}</span>
+                                        </td>
+                                        <td class="text-center">
+                                            {% include 'group/extras/options.html' %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {% include 'includes/paginate.html' %}
+
+                </div>
+            </div>
+        </div>
+
+        {% include "includes/footer.html" %}
+
+    </div>
+
+    {% include 'modals/confirmacion.html' %}
+    {% include 'group/extras/modal_details.html' %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{% static 'js/details_group.js' %}"></script>
+{% endblock %}

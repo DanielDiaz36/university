@@ -45,3 +45,15 @@ class PermissionRequiredMixin(AccessMixin):
                 # Si el usuario no tiene permisos, se muestra la página de permiso denegado.
                 raise PermissionDenied
         return super().dispatch(request, *args, **kwargs)
+
+
+PERMS_HTML = {
+    'admin': [
+        'add-group',
+        'edit-group',
+        'delete-group',
+        'add-student',
+        'edit-student',
+        'delete-student',
+    ]
+}

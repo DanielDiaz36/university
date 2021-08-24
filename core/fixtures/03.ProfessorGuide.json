@@ -3,7 +3,40 @@
     "model": "core.professorguide",
     "pk": 1,
     "fields": {
+      "name": "Rachel Pereda",
+      "created_by": 1,
+      "created_at": "2021-08-23T14:47:01.612Z",
+      "updated_by": 1,
+      "updated_at": "2021-08-23T14:47:01.612Z"
+    }
+  },
+  {
+    "model": "core.professorguide",
+    "pk": 2,
+    "fields": {
       "name": "Jose Alvarez",
+      "created_by": 1,
+      "created_at": "2021-08-23T14:47:01.612Z",
+      "updated_by": 1,
+      "updated_at": "2021-08-23T14:47:01.612Z"
+    }
+  },
+  {
+    "model": "core.professorguide",
+    "pk": 3,
+    "fields": {
+      "name": "Gustavo Díaz",
+      "created_by": 1,
+      "created_at": "2021-08-23T14:47:01.612Z",
+      "updated_by": 1,
+      "updated_at": "2021-08-23T14:47:01.612Z"
+    }
+  },
+  {
+    "model": "core.professorguide",
+    "pk": 4,
+    "fields": {
+      "name": "Annie Delgado",
       "created_by": 1,
       "created_at": "2021-08-23T14:47:01.612Z",
       "updated_by": 1,

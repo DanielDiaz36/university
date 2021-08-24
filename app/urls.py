@@ -17,4 +17,6 @@ urlpatterns += i18n_patterns(
 
     path('', include('website.urls')),
 
+    path('', include('core.urls')),
+
 )

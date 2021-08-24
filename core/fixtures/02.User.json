@@ -4,6 +4,8 @@
     "pk": 1,
     "fields": {
       "username": "admin",
+      "first_name": "System",
+      "last_name": "Administrator",
       "password": "pbkdf2_sha256$260000$RPyGSJcrqDQ6M5zR0HI80h$n8+Ozw2/zbWDmJgj9EVDhcgZzODdwtQgXWpzRHW4tpo=",
       "user_category": 1,
       "is_staff": true,

@@ -8,12 +8,12 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {% if active_student %} active {% endif %}" href="#">
+        <a class="nav-link {% if active_student %} active {% endif %}" href="{% url 'students' %}">
             <i class="fas fa-user text-blue"></i> {% trans 'student'|capfirst %}
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link {% if active_group %} active {% endif %}" href="#">
+        <a class="nav-link {% if active_group %} active {% endif %}" href="{% url 'groups' %}">
             <i class="fas fa-users text-blue"></i> {% trans 'group'|capfirst %}
         </a>
     </li>

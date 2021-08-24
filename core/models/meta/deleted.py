@@ -12,3 +12,6 @@ class Deleted(models.Model):
 
     class Meta:
         abstract = True
+
+    def is_deleted_(self):
+        return _('Yes') if self.is_deleted else _('No')
