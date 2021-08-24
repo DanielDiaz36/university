@@ -1,0 +1,151 @@
+/*  START - UPDATE FONT SIZE  */
+.table .thead-light th {
+    font-size: 92% !important;;
+}
+
+.table th, .table td {
+    font-size: 100% !important;;
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: 0.9rem !important;
+}
+/*  END - UPDATE FONT SIZE  */
+
+/*  START - GENERAL  */
+.hidden_element {
+    display: none !important;
+}
+
+.errorlist > li {
+    color: #e84641 !important;
+    margin-top: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px !important;
+}
+
+
+.field_required {
+    color: red;
+    font-size: 100%;
+    display: inline
+}
+
+.estado_habilitado {
+    border-radius: 2rem;
+    color: #ffffff;
+    background: #0abb87;
+    height: 0;
+    width: auto;
+    padding: 0.75rem 0.75rem;
+}
+
+.estado_deshabilitado {
+    border-radius: 2rem;
+    color: #ffffff;
+    background: #fd397a;;
+    height: 0;
+    width: auto;
+    padding: 0.75rem 0.75rem;
+}
+
+.table-responsive {
+    min-height: 350px !important;
+}
+/*  END - GENERAL  */
+
+/*  MENU  */
+.active {
+    color: rgb(94 114 228)!important;
+}
+
+/*  MENU  */
+
+/*  START - MODALS  */
+.section_page_modal {
+    background-color: #889aff;
+    height: 50px;
+}
+
+.section_title_modal {
+    display: inline-block;
+    color: #ffffff;
+}
+/*  END - MODALS  */
+
+/*  START - SECTION PAGE  */
+.section_page {
+    background-color: #ececec;
+    height: 50px;
+}
+
+.section_title {
+    display: inline-block;
+    color: #53536d;
+}
+
+.section_option {
+    display: inline-block;
+    clear: both;
+    float: right;
+}
+/*  END - SECTION PAGE  */
+
+/*  START - REPORT  */
+.report_content {
+    padding: 15px;
+}
+
+.report_item {
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+    padding: 5px 15px;
+    margin: 20px 5px;
+    background-color: rgba(241, 241, 241, 1);
+}
+
+.report_item:hover {
+    background-color: rgba(236, 236, 236, 1);
+}
+/*  END - REPORT  */
+
+/*  START - USUARIOS  */
+.first_item_user_detail {
+    list-style: none;
+    border: 0.2pt solid #e3e6f0 ;
+    padding: .75rem;
+    font-size: 115%;
+}
+.item_user_detail {
+    list-style: none;
+    border-width: 0 0.2pt 0.2pt 0.2pt;
+    border-style: solid;
+    border-color: #e3e6f0;
+    padding: .75rem;
+    font-size: 115%;
+}
+
+.item_user_detail__b {
+    font-weight: 700 !important;
+}
+/*  END - USUARIOS  */
+
+/*.div_captcha {*/
+/*    width: 60% !important;*/
+/*}*/
+
+#id_captcha_1 {
+    width: 60% !important;
+    /*background: rgba(255, 255, 255, 0.015);*/
+    border: none;
+    padding-left: 1.5rem;
+    color: #a7abc3 !important;
+}
+
+/*.js-captcha-refresh {*/
+/*    margin-left: 15px !important;*/
+/*    margin-top: 9px !important;*/
+/*}*/

@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-24 01:17-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\app\settings.py:131
+msgid "English"
+msgstr "Inglés"
+
+#: .\app\settings.py:132
+msgid "Spanish"
+msgstr "Español"
+
+#: .\core\models\user_category.py:8
+msgid "name"
+msgstr "nombre"
+
+#: .\core\models\user_category.py:10
+msgid "description"
+msgstr "descripción"
+
+#: .\core\models\user_category.py:12
+msgid "is active"
+msgstr "está activo"
+
+#: .\core\models\user_category.py:14 .\users\models\user.py:27
+msgid "created at"
+msgstr "fecha de registro"
+
+#: .\core\models\user_category.py:16 .\users\models\user.py:29
+msgid "updated at"
+msgstr "fecha de actualización"
+
+#: .\core\models\user_category.py:24
+msgid "User category"
+msgstr "Categoría de usuario"
+
+#: .\core\models\user_category.py:25
+msgid "User categories"
+msgstr "Categorías de usuario"
+
+#: .\website\forms\login.py:16
+msgid "Password"
+msgstr "Contraseña"
+
+#: .\website\forms\login.py:24
+#, python-format
+msgid ""
+"Please enter a correct %(username)s and password. Note that both fields may "
+"be case-sensitive."
+msgstr ""
+
+#: .\website\forms\login.py:27
+msgid "This account is inactive."
+msgstr "Esta cuenta está inactiva"
+
+#: .\website\templates\includes\menu.html:7
+msgid "home"
+msgstr "inicio"
+
+#: .\website\templates\includes\menu.html:12
+msgid "student"
+msgstr "estudiante"
+
+#: .\website\templates\includes\menu.html:17
+msgid "group"
+msgstr "grupo"
+
+#: .\website\templates\includes\navigation\account.html:19
+msgid "logout"
+msgstr "salir"
+
+#: .\website\templates\pages\login.html:42
+msgid "Refresh the captcha"
+msgstr "Actualizar el captcha"
+
+#: .\website\urls.py:10
+msgid "login/"
+msgstr "acceder/"
+
+#: .\website\urls.py:12
+msgid "logout/"
+msgstr "salir/"

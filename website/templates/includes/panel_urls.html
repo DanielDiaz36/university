@@ -1,0 +1,10 @@
+<nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+    <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+        <li class="breadcrumb-item"><a href="{% url 'login' %}"><i class="fas fa-home"></i></a></li>
+        {% for p in path %}
+            <li class="breadcrumb-item">
+                <a href="{% if p.href %}{{ p.href }}{% else %}javascript:;{% endif %}">{{ p.name }}</a>
+            </li>
+        {% endfor %}
+    </ol>
+</nav>

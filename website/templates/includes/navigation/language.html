@@ -1,0 +1,41 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_language_info for LANGUAGE_CODE as current_language %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+
+<a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+   aria-expanded="false">
+    <div class="media align-items-center">
+        <span class="avatar avatar-sm rounded-circle">
+            <img alt="Image placeholder" src="{% static 'img/flags/' %}{{ LANGUAGE_CODE }}.svg">
+        </span>
+    </div>
+</a>
+<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" style="margin-right: 30px">
+    <form action="{% url 'set_language' %}" id = 'change_language' method="post">{% csrf_token %}
+        <ul class="navbar-nav align-items-left d-none d-md-flex" style="list-style-type: none">
+            {% for language_code, language_name in LANGUAGES %}
+                {% if language_code != LANGUAGE_CODE %}
+                    <li style="width: 100% !important;">
+                        <a href="javascript:;" class="dropdown-item" onclick="$('#change_language').submit()">
+                            <span style="height: 20px">
+                                <img src="{% static 'img/flags/' %}{{ language_code }}.svg" alt="" style="height: 28px;"/>
+                            </span>
+                            <span>
+                                {% for language in languages %}
+                                    {% if language.code == language_code %}
+                                        {{ language.name_local|capfirst }}
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+                        </a>
+                        <input name="next" type="hidden" value="{{ redirect_to }}" >
+                        <input name="language" id="id_language" type="hidden" value="{{ language_code }}" >
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </form>
+</div>

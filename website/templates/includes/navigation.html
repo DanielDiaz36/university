@@ -1,0 +1,22 @@
+{% load static %}
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-top navbar-expand navbar-dark bg-primary" id="navbar-main"
+     style="border-bottom:1px solid rgb(233, 236, 239) !important; border-color: rgba(255, 255, 255, 0.08) !important;">
+    <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="javascript:;"></a>
+        <!-- User -->
+        <ul class="navbar-nav align-items-center d-none d-md-flex">
+            <li class="nav-item dropdown" style="padding-right: 30px">
+                {% include 'includes/navigation/language.html' %}
+            </li>
+            <li class="nav-item dropdown">
+                {% include 'includes/navigation/account.html' %}
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End Navbar -->
+
