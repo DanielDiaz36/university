@@ -29,16 +29,13 @@ class StudentForm(forms.ModelForm):
             'email': forms.TextInput(attrs={'class': 'form-control'}),
 
             'group': forms.Select(attrs={'class': 'form-control'}),
+
+            'city_birthday': forms.Select(attrs={'class': 'form-control'}),
         }
 
     date_birthday = forms.DateTimeField(
         widget=forms.TextInput(attrs={'class': 'form-control datetime', 'readonly': True, 'required': True}),
         label=_('date birthday').capitalize()
-    )
-
-    city_birthday = forms.DateTimeField(
-        widget=forms.TextInput(attrs={'class': 'form-control datetime', 'readonly': True, 'required': True}),
-        label=_('city birth').capitalize()
     )
 
     def clean_age(self):

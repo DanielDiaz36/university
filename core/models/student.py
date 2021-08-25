@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from core.models import Created, Updated
+from core.models.city import City
 from core.utils.enums import GenderEnum
 from core.models.group import Group
 from django.utils.translation import gettext_lazy as _
@@ -21,7 +22,7 @@ class Student(Created, Updated):
 
     date_birthday = models.DateField(verbose_name=_('date of birthday'))
 
-    city_birthday = models.DateField(verbose_name=_('city of birthday'))
+    city_birthday = models.ForeignKey(City, on_delete=models.PROTECT, verbose_name=_('city birthday'))
 
     group = models.ForeignKey(Group, on_delete=models.PROTECT)
 
