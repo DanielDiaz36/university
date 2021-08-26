@@ -66,7 +66,7 @@ class StudentDetailsAjaxView(TemplateView):
             'gender': student.gender.capitalize(),
             'email': student.email,
             'date_birthday': str(student.date_birthday.strftime("%d-%m-%Y")),
-            'city_birthday': str(student.city_birthday.strftime("%d-%m-%Y")),
+            'city_birthday': student.city_birthday.name,
             'group': student.group.name,
             'is_active': str(student.is_active_()),
             'created_by': str(student.created_by.fullname()),
